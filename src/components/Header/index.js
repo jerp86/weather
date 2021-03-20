@@ -5,15 +5,15 @@ import { Ionicons } from '@expo/vector-icons';
 
 import { styles } from './styles';
 
-const Menu = () => {
+const Menu = ({ background, icon, weather }) => {
   return (
-    <LinearGradient style={styles.header} colors={['#1ED6FF', '#97C1FF']}>
-      <Text style={styles.date}>16/03/2021</Text>
-      <Text style={styles.city}>Botucatu</Text>
+    <LinearGradient style={styles.header} colors={background}>
+      <Text style={styles.date}>{weather.date}</Text>
+      <Text style={styles.city}>{weather.city}</Text>
 
-      <Ionicons name="cloud" color="#FFF" size={150} />
+      <Ionicons name={icon.name} color={icon.color} size={150} />
 
-      <Text style={styles.temp}>30°</Text>
+      <Text style={styles.temp}>{weather.temp}°</Text>
     </LinearGradient>
   );
 }

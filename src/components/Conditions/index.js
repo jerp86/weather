@@ -4,27 +4,27 @@ import { Feather, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { styles } from './styles';
 
-const Conditions = () => {
+const Conditions = ({ weather }) => {
   return (
     <View style={styles.container}>
       <View style={styles.condition}>
         <Feather name="wind" size={23} color="#1Ed6FF" />
-        <Text>7 mk/h</Text>
+        <Text>{weather.wind_speedy}</Text>
       </View>
 
       <View style={styles.condition}>
         <MaterialCommunityIcons name="weather-sunset-up" size={23} color="#1Ed6FF" />
-        <Text>5h22</Text>
+        <Text>{weather.sunrise}</Text>
       </View>
 
       <View style={styles.condition}>
         <MaterialCommunityIcons name="weather-sunset-down" size={23} color="#1Ed6FF" />
-        <Text>18h00</Text>
+        <Text>{weather.sunset}</Text>
       </View>
 
       <View style={styles.condition}>
         <Feather name="droplet" size={23} color="#1Ed6FF" />
-        <Text>65</Text>
+        <Text>{weather.humidity}</Text>
       </View>
     </View>
   );

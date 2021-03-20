@@ -11,7 +11,11 @@ const Forecast = ({ data }) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.date}>{data.date}</Text>
+      <View style={styles.temp}>
+        <Text style={styles.date}>{data.date}</Text>
+        <Text style={styles.date}>{data.weekday}</Text>
+      </View>
+
       <Ionicons name={name} color={color} size={25} />
 
       <View style={styles.temp}>
