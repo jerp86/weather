@@ -20,12 +20,14 @@ export const condition = condition => {
         name: 'partly-sunny-outline',
         color: '#FFB300',
       };
-    case 'cloud' | 'cloudly_night':
+    case 'cloud':
+    case 'cloudly_night':
       return icon = {
         name: 'cloudy-night-outline',
         color: '#1EC9FF',
       };
-    case 'rain' | 'hail':
+    case 'rain':
+    case 'hail':
       return icon = {
         name: 'rainy-outline',
         color: '#1EC9FF',
